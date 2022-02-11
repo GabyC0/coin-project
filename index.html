@@ -22,10 +22,6 @@
     </ul>
     <p>May the odds be ever in your favor!</p>
 
-    <div id="threeCoins">
-
-    </div>
-
     <form action="dropdown">
         <label for="Choose amount of coins"></label>
         <select name="coins" id="coins">
@@ -34,7 +30,14 @@
             <option value="3">3 Coins</option>
         </select>
         <br>
-        <input type="submit" value="Flip">
+        <input type="submit" value="Flip" onclick="headsTails()">
     </form>
+
+    <div id="threeCoins">
+        <div id="coinOne">one</div>
+        <div id="coinTwo">two</div>
+        <div id="coinThree">three</div>
+        Hello
+    </div>
 
   </body>
