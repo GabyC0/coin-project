@@ -22,15 +22,17 @@
     </ul>
     <p>May the odds be ever in your favor!</p>
 
-    <form action="dropdown">
+    <form id="formVal" action="dropdown">
         <label for="Choose amount of coins"></label>
-        <select name="coins" id="coins">
+        <select id="coins" onchange="coinToss()">
+            <option value="0">--Choose coin amt--</option>
             <option value="1">1 Coin</option>
             <option value="2">2 Coins</option>
             <option value="3">3 Coins</option>
         </select>
         <br>
-        <input type="submit" value="Flip" onclick="headsTails()">
+        <p>The amount of coins you selected: <input type="text" id="amount"></p>
+        
     </form>
 
     <div id="threeCoins">
@@ -41,3 +43,5 @@
     </div>
 
   </body>
+  <script src="js/main.js" ></script>
+</html>
