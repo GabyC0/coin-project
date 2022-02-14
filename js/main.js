@@ -16,6 +16,18 @@
 
 // document.getElementById('coinOne').innerHTML =(coin1);
 
+function headsTails() {
+    let num = Math.round(Math.random() * (2 - 1) + 1);
+    
+    if(num === 1) {
+        document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />"
+        
+    } else if (num === 2) {
+        document.getElementById("coinOne", "coinTwo").innerHTML= "<img src='images/back.png' />"
+    }
+
+};
+
 function coinToss() {
     var myList = document.getElementById('coins');
     document.getElementById("amount").value = myList.options[myList.selectedIndex].text;
@@ -24,8 +36,22 @@ function coinToss() {
 
     console.log(numSelected);
 
+    // document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />"
+
     if (numSelected === 1){
         console.log("you chose 1");
+
+        let num = Math.random() * (2-1) + 1;
+        console.log("either 1 or 2", Math.round(num));
+
+        headsTails();
+
+        // if(num === 1) {
+        //     document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />";
+            
+        // } if (num === 2) {
+        //     document.getElementById("coinOne").innerHTML= "<img src='images/back.png' />";
+        // }
     } else if (numSelected === 2) {
         console.log("you chose 2");
     } else if (numSelected === 3) {
@@ -49,16 +75,4 @@ function coinToss() {
 //     return Math.round(num);
 // };
 
-function headsTails() {
-    let num = Math.random() * (2 - 1) + 1;
 
-    if(num === 1) {
-        document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />"
-        return Math.round(num);
-    } else if (num === 2) {
-        document.getElementById("coinOne", "coinTwo").innerHTML= "<img src='images/back.png' />"
-        return Math.round(num);
-    }
-
-};
-headsTails();
