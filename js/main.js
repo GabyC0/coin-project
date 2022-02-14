@@ -59,7 +59,7 @@ function headsTailsThree() {
 };
 
 function coinToss() {
-    var myList = document.getElementById('coins');
+    let myList = document.getElementById('coins');
     document.getElementById("amount").value = myList.options[myList.selectedIndex].text;
 
     let numSelected = myList.selectedIndex;
@@ -96,7 +96,7 @@ function coinToss() {
         headsTails();
         headsTailsTwo();
         headsTailsThree();
-        
+
     } else {
         console.log("please choose");
     }
