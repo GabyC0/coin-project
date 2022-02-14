@@ -30,18 +30,32 @@ function headsTails() {
 };
 
 function headsTailsTwo() {
-    document.getElementById("coinTwo").innerHTML = "<img src='images/front.png' />"
+
+    // document.getElementById("coinOne").innerHTML = "<img src='images/front.png' />"
+
 
     let num = Math.round(Math.random() * (2 - 1) + 1);
     console.log("either 1 or 2", Math.round(num));
     
     if(num === 1) {
-        document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />"
+        document.getElementById("coinTwo").innerHTML= "<img src='images/front.png' />"
         
     } else if (num === 2) {
-        document.getElementById("coinOne", "coinTwo").innerHTML= "<img src='images/back.png' />"
+        document.getElementById("coinTwo").innerHTML= "<img src='images/back.png' />"
     }
 
+};
+
+function headsTailsThree() {
+    let num = Math.round(Math.random() * (2 - 1) + 1);
+    console.log("either 1 or 2", Math.round(num));
+    
+    if(num === 1) {
+        document.getElementById("coinThree").innerHTML= "<img src='images/front.png' />"
+        
+    } else if (num === 2) {
+        document.getElementById("coinThree").innerHTML= "<img src='images/back.png' />"
+    }
 };
 
 function coinToss() {
@@ -71,13 +85,18 @@ function coinToss() {
     } else if (numSelected === 2) {
         console.log("you chose 2");
 
-        let num = Math.random() * (2-1) + 1;
-        console.log("either 1 or 2", Math.round(num));
-
+        // let num = Math.random() * (2-1) + 1;
+        // console.log("either 1 or 2", Math.round(num));
         headsTails();
+        headsTailsTwo();
 
     } else if (numSelected === 3) {
         console.log("you chose 3"); 
+
+        headsTails();
+        headsTailsTwo();
+        headsTailsThree();
+        
     } else {
         console.log("please choose");
     }
