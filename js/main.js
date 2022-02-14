@@ -1,4 +1,4 @@
-document.getElementById("formVal")
+//document.getElementById("formVal")
 
 //variables for each coin image
 // const coin1 = document.createElement('img');
@@ -26,8 +26,6 @@ function coinToss() {
 
     if (numSelected === 1){
         console.log("you chose 1");
-
-        document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />"
     } else if (numSelected === 2) {
         console.log("you chose 2");
     } else if (numSelected === 3) {
@@ -47,5 +45,20 @@ function coinToss() {
 //function using math.random to flip
 
 // function headsTails() {
+//     let num = Math.random() * (2 - 1) + 1;
+//     return Math.round(num);
+// };
 
-// }
+function headsTails() {
+    let num = Math.random() * (2 - 1) + 1;
+
+    if(num === 1) {
+        document.getElementById("coinOne").innerHTML= "<img src='images/front.png' />"
+        return Math.round(num);
+    } else if (num === 2) {
+        document.getElementById("coinOne", "coinTwo").innerHTML= "<img src='images/back.png' />"
+        return Math.round(num);
+    }
+
+};
+headsTails();
