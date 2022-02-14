@@ -71,9 +71,35 @@ div #coinThree {
 }
 
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1400px) {
+
     body {
         margin-left: 400px;
         margin-right: 400px;
     }
+
+}
+
+@media screen and (max-width: 750px) {
+
+    div {
+        text-align: center;
+    }
+
+   div #coinOne {
+        width: 100%;
+    }
+
+    div #coinTwo {
+        width: 100%;
+    }
+
+    div #coinThree {
+        width: 100%;
+    }
+
+    img {
+        margin: auto;
+    }
+    
 }
